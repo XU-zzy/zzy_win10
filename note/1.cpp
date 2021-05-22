@@ -16,6 +16,10 @@ int shell_sort(int *data,int length){
     }
     
 }
+int main(){
+    printf("dd\n");
+    return 0;
+}
 
 
 

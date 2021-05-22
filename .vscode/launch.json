@@ -13,13 +13,14 @@
             // "environment": [],
             "environment": [
                 {
-                    "name":"PATH",
-                    "value": "%PATH%;C:\\mingw64\\bin;C:\\mingw64\\opt\\bin;C:\\mingw64\\libexec\\gcc\\x86_64-w64-mingw32\\8.1.0;C:\\mingw64\\x86_64-w64-mingw32\\bin"
+                    "name":"Path",
+                    "value": "%Path%;C:\\mingw64\\bin;C:\\mingw64\\opt\\bin;C:\\mingw64\\libexec\\gcc\\x86_64-w64-mingw32\\8.1.0;C:\\mingw64\\x86_64-w64-mingw32\\bin"
                 }
             ],
             "externalConsole": true,// 调试时是否显示控制台窗口，一般设置为true显示控制台
             "MIMode": "gdb",
-            "miDebuggerPath": "E:\\TDM-GCC-64\\bin\\gdb64.exe",// miDebugger的路径，注意这里要与MinGw的路径对应
+            // "miDebuggerPath": "E:\\TDM-GCC-64\\bin\\gdb64.exe",// miDebugger的路径，注意这里要与MinGw的路径对应
+            "miDebuggerPath":"C:\\mingw64\\bin\\gdb.exe",
             "preLaunchTask": "g++",    // 调试会话开始前执行的任务，一般为编译程序，c++为g++, c为gcc
             "setupCommands": [
                 {

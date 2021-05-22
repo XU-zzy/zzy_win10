@@ -7,8 +7,9 @@
                 "-g",
                 "${file}",
                 "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
                 "-pthread",
-                "${fileDirname}/${fileBasenameNoExtension}.exe"
+                "-std=c++11"
             ],
             // "args": [
             //     "-g", // 编译参数设置-g表示可以使用gdb调试// "-D_GLIBCXX_USE_NANOSLEEP",
