@@ -10,7 +10,13 @@
             "args": [],                // 程序调试时传递给程序的命令行参数，一般设为空即可
             "stopAtEntry": false,     // 设为true时程序将暂停在程序入口处，一般设置为false
             "cwd": "${workspaceRoot}",// 调试程序时的工作目录，一般为${workspaceRoot}即代码所在目录
-            "environment": [],
+            // "environment": [],
+            "environment": [
+                {
+                    "name":"PATH",
+                    "value": "%PATH%;C:\\mingw64\\bin;C:\\mingw64\\opt\\bin;C:\\mingw64\\libexec\\gcc\\x86_64-w64-mingw32\\8.1.0;C:\\mingw64\\x86_64-w64-mingw32\\bin"
+                }
+            ],
             "externalConsole": true,// 调试时是否显示控制台窗口，一般设置为true显示控制台
             "MIMode": "gdb",
             "miDebuggerPath": "E:\\TDM-GCC-64\\bin\\gdb64.exe",// miDebugger的路径，注意这里要与MinGw的路径对应

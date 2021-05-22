@@ -7,8 +7,21 @@
                 "-g",
                 "${file}",
                 "-o",
+                "-pthread",
                 "${fileDirname}/${fileBasenameNoExtension}.exe"
             ],
+            // "args": [
+            //     "-g", // 编译参数设置-g表示可以使用gdb调试// "-D_GLIBCXX_USE_NANOSLEEP",
+            //     // "-fno-elide-constructors", 
+            //     "-pthread",
+            //     "${workspaceFolder}/*.cpp", 
+            //     "${workspaceFolder}/universal/*.cpp" , 
+            //     "${workspaceFolder}/multithread/*.cpp", 
+            //     "-o", 
+            //     "train",
+            //     "-std=c++11"
+            // ],
+                
             "problemMatcher": {
                 "owner": "cpp",
                 "fileLocation": [
