@@ -7,14 +7,12 @@
 #include<cstring>
 using namespace std;
 map<char,int>getnum;
-// char get_char[100];         //获得对应字符
-char *get_char = (char*)malloc(sizeof(char)*100);         //获得对应字符
+char get_char[100];         //获得对应字符
 vector<string>proce;
 int table[100][100];      //预测分析表
 int num=0;int numvt=0;     //numvt是终结符集合，0是‘#’，numvt表空字
 string first[100];
 string follow[200];
-
 void readin()
 {
     memset(table,-1,sizeof(table));
@@ -84,7 +82,7 @@ string get_f(int vn,int & has_0)     //dfs:vn能推出的不含空字的vt集合
         }
     return  ans;
 }
-void getfirst()
+void getfirst()             //获得first集
 {
     for(int i=1;i<=numvt;i++)     //终结符，first集是其本身。
     {
@@ -162,7 +160,8 @@ void gettable()          //得预测分析表
            }
            else                                     //有空字的，考察follw集
            {
-               string flw=follow[getnum[proce[i][1]]];
+              string flw=follow[getnum[proce[i][1]]];
+            //   string flw=follow[getnum[proce[i][0]]];
               for(int k=0;k<flw.size();k++)
              {
                  table[getnum[proce[i][0]]][flw[k]-'0']=i;
@@ -266,3 +265,12 @@ int main()
     else   cout<<"error!"<<endl;
     return 0;
 }
+// 样例
+// < > i + *
+// E A T B F
+// E->TA
+// A->+TA|@
+// T->FB
+// B->*FB|@
+// F-><E>|i
+// end
