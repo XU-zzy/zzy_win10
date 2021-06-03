@@ -14,7 +14,7 @@
 ListNode *reverse(Listnode* head){
     if(head->next == null || head == nullptr)    return head;    //不要忘了递归中的base case
     
-    //这里不要进入递归，而是将后面的看作时一个整体
+    //理解的时候这里不要进入递归，而是将后面的看作时一个整体
     ListNode* last = reverse(head->next);
     
     head->next->next = head;
@@ -26,11 +26,11 @@ ListNode *reverse(Listnode* head){
 ### 反转前n个链表
 ```c
 //反转前n个链表
-//存储指向第n+1个节点,用于最后连接链表
 ListNode *t;
 ListNode *reverseN(Lisnode* head,int n){
     
     if(n == 1){
+        //存储指向第n+1个节点,用于最后连接链表
         t = head->next;
         return head;
     }
@@ -88,6 +88,7 @@ ListNode* reverseHT(ListNode*head,ListNode tail){
 ListNode* reverseKGroup(ListNode* head, int k){
     if(head == nullptr || head->next == nullptr) return head;
 
+    //判断剩下的链表节点个数够不够一组
     ListNode* right = head;
     ListNode* left = head;
     for(int i = 0;i < k;i++){
@@ -97,11 +98,13 @@ ListNode* reverseKGroup(ListNode* head, int k){
         right = right->next;
     }
 
+    //反转这一组链表
     ListNode* ans = reverseHT(left,right);
 
     //开始下一组
     //从right开始,即本次反转的链表的尾的下一个，是下一组的起点
     //注意这里需要将反转后的链表和原链表连接起来
+    //此时的head其实是反转后的尾元素，将他和剩下的部分连接
     head->next = reverseKGroup(right,k);
     
     return ans;
