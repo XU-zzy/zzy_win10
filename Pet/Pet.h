@@ -1,8 +1,18 @@
-#include "main.h"
+#pragma once 
+#ifndef _PET_H_
+#define _PET_H_
+// #include "main.h"
+#include<iostream>
+#include<fstream>
+#include<cstring>
+#include<list>
+#include<vector>
+#include<string>
+
 
 class Pet
 {
-private:
+public:
     std::string P_number;   //编号
     std::string P_name;     //名称
     std::string P_weight;   //体重
@@ -33,5 +43,6 @@ public:
     friend std::ostream & operator << (std::ostream& os,const Pet& pt);
     friend std::istream & operator >> (std::istream& is,Pet& pt);
     bool operator == (Pet& pt);
-    ~Pet();
+    ~Pet(){};
 };
+#endif

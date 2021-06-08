@@ -5,12 +5,21 @@
             "command": "g++",
             "args": [
                 "-g",
-                "${file}",
+                // "${file}",
+                "${workspaceFolder}\\*.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.exe",
                 "-pthread",
                 "-std=c++11"
             ],
+            // "args":["${workspaceFolder}\\*.cpp", 
+            //          "-o", "${workspaceFolder}\\${workspaceFolderBasename}.exe",
+            //          "-g"], //这里的*.cpp是关键
+
+            // // args是编译指令的参数，注意"-o"后面的那个参数，指定了输出可执行文件的存放位置，这个参数必须与launch.json的program相同
+            // "type": "shell", // process和shell，我用了shell，具体参见VSCode官方文档
+ 
+
             // "args": [
             //     "-g", // 编译参数设置-g表示可以使用gdb调试// "-D_GLIBCXX_USE_NANOSLEEP",
             //     // "-fno-elide-constructors", 

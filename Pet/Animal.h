@@ -1,7 +1,9 @@
-#include "main.h"
+#pragma once 
+#ifndef _ANIMAL_H_
+#define _ANIMAL_H_
 #include "Pet.h"
 
-std::vector<Animal>Pet_data;
+
 class Animal:public Pet
 {
 private:
@@ -18,12 +20,5 @@ public:
     Pet& FindMs_Pet(std::string number);                 //查找宠物信息
 };
 
-Animal::Animal()
-{
-    this->M_pt = new Pet;
-}
 
-Animal::~Animal()
-{
-    delete M_pt;
-}
+#endif

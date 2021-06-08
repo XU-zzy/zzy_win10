@@ -15,6 +15,17 @@
 #define     RWRITE_PET_SUCCE    1       //修改成功
 #define     RWRITE_PET_FAIL    -1       //修改失败
 #define     RWRITE_PET_ERROR   -2       //修改错误
+std::vector<Animal>Pet_data;
+
+Animal::Animal()
+{ 
+    this->M_pt = new Pet;
+}
+
+Animal::~Animal()
+{
+    delete M_pt;
+}
 
 //查找宠物是否存在
 int Animal::Find_Pet(Pet &pt){
@@ -89,6 +100,6 @@ Pet& Animal::FindMs_Pet(std::string number){
             return *it;
         }
     }
-    Pet pt;
-    return pt;
+    static Pet t("-1");
+    return t;
 }
