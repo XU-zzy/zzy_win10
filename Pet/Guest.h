@@ -7,15 +7,6 @@ private:
     std::string G_name;
     std::string G_state;
 public:
-    Guest();
-    Guest(std::string number,):{}
-    ~Guest();
+    Guest(){};
+    ~Guest(){};
 };
-
-Guest::Guest(/* args */)
-{
-}
-
-Guest::~Guest()
-{
-}

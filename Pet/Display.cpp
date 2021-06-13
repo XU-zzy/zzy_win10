@@ -38,6 +38,7 @@ int Display::Display_Main_Menu(){
 	    std::cout<<" \t|=========================== |\n"<<std::endl;
 	
         std::cin>>choice;
+
         switch(choice){
             case 1: {Display_Insert();      continue;}
             case 2: {Display_Delete();      continue;}
@@ -285,28 +286,28 @@ int Display::Display_Read_File(){
                 Pet pet;
                 F_in>>str;
                 index = str.find("：");
-                pet.P_number = str.substr(index + 3);
+                pet.P_number = str.substr(index + 2);
                 F_in>>str;
                 index = str.find("：");
-                pet.P_name = str.substr(index + 3);
+                pet.P_name = str.substr(index + 2);
                 F_in>>str;
                 index = str.find("：");
-                pet.P_weight = str.substr(index + 3);
+                pet.P_weight = str.substr(index + 2);
                 F_in>>str;
                 index = str.find("：");
-                pet.P_age = str.substr(index + 3);
+                pet.P_age = str.substr(index + 2);
                 F_in>>str;
                 index = str.find("：");
-                pet.P_kind = str.substr(index + 3);
+                pet.P_kind = str.substr(index + 2);
                 F_in>>str;
                 index = str.find("：");
-                pet.P_price = str.substr(index + 3);
+                pet.P_price = str.substr(index + 2);
                 F_in>>str;
                 index = str.find("：");
-                pet.P_character = str.substr(index + 3);
+                pet.P_character = str.substr(index + 2);
                 F_in>>str;
                 index = str.find("：");
-                pet.P_state = str.substr(index + 3);
+                pet.P_state = str.substr(index + 2);
 
                 // Display_Pet_Mes(pet);
 
