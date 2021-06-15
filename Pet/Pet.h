@@ -12,21 +12,21 @@
 class Pet
 {
 public:
-    std::string P_number;   //ç¼–å·
-    std::string P_name;     //åç§°
-    std::string P_weight;   //ä½“é‡
-    std::string P_age;      //å¹´é¾„
-    std::string P_kind;     //ç±»åˆ«
-    std::string P_price;    //ä»·æ ¼
-    std::string P_character;//æ€§æ ¼
-    std::string P_state;    //çŠ¶æ€ï¼ˆæ˜¯å¦è¢«å–å‡ºï¼‰
+    std::string P_number;   //±àºÅ
+    std::string P_name;     //Ãû³Æ
+    std::string P_weight;   //ÌåÖØ
+    std::string P_age;      //ÄêÁä
+    std::string P_kind;     //Àà±ğ
+    std::string P_price;    //¼Û¸ñ
+    std::string P_character;//ĞÔ¸ñ
+    std::string P_state;    //×´Ì¬£¨ÊÇ·ñ±»Âô³ö£©
 public:
     Pet(){};
     Pet(std::string number):P_number(number){}
     Pet(std::string number,std::string name,std::string weight,std::string age,std::string kind,std::string price,std::string character,std::string state);
-    //å¤åˆ¶æ„é€ 
+    //¸´ÖÆ¹¹Ôì
     Pet(const Pet &other);
-    //èµ‹å€¼æ“ä½œç¬¦
+    //¸³Öµ²Ù×÷·û
     Pet& operator = (const Pet &other){
         this->P_number = other.P_number;
         this->P_name = other.P_name;
@@ -38,7 +38,7 @@ public:
         this->P_state = other.P_state;
         return *this;
     }
-    //é‡è½½è¿ç®—ç¬¦
+    //ÖØÔØÔËËã·û
     friend std::ostream & operator << (std::ostream& os,const Pet& pt);
     friend std::istream & operator >> (std::istream& is,Pet& pt);
     bool operator == (Pet& pt);

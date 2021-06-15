@@ -10,7 +10,7 @@ int main(){
     Display dis(pet);
     dis.Display_Main_Menu();
 
-    std::cout << "æ„Ÿè°¢ä½¿ç”¨"  << std::endl;
+    std::cout << "¸ĞĞ»Ê¹ÓÃ"  << std::endl;
 
     return 0;
 }

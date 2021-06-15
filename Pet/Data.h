@@ -31,9 +31,9 @@ public:
     Date& operator+=(int day);
     Date operator-(int day);
     Date& operator-=(int day);
-    int operator-(const Date& d);//æ—¥æœŸ-æ—¥æœŸ è¿”å›å¤©æ•°
-    Date& operator++();//é»˜è®¤å‰ç½®
-    Date operator++(int);//ç”¨å‚æ•°æ ‡å¿—åç½®++
+    int operator-(const Date& d);//ÈÕÆÚ-ÈÕÆÚ ·µ»ØÌìÊı
+    Date& operator++();//Ä¬ÈÏÇ°ÖÃ
+    Date operator++(int);//ÓÃ²ÎÊı±êÖ¾ºóÖÃ++
     Date& operator--();
     Date operator--(int);
  

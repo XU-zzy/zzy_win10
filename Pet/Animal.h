@@ -2,22 +2,22 @@
 #ifndef _ANIMAL_H_
 #define _ANIMAL_H_
 #include "Pet.h"
-#define     FIND_PET_EMPTY      0       //å® ç‰©æ•°ç»„ä¸ºç©º
-#define     FIND_PET_SUCCE      1       //æˆåŠŸæŸ¥æ‰¾åˆ°
-#define     FIND_PET_FAIL      -1       //æœªæˆåŠŸæŸ¥æ‰¾åˆ°
-#define     FIND_PET_ERROR     -2       //æŸ¥æ‰¾é”™è¯¯
+#define     FIND_PET_EMPTY      0       //³èÎïÊı×éÎª¿Õ
+#define     FIND_PET_SUCCE      1       //³É¹¦²éÕÒµ½
+#define     FIND_PET_FAIL      -1       //Î´³É¹¦²éÕÒµ½
+#define     FIND_PET_ERROR     -2       //²éÕÒ´íÎó
 
-#define     INSERT_PET_SUCCE    1       //æ·»åŠ æˆåŠŸ
-#define     INSERT_PET_FAIL    -1       //æ·»åŠ å¤±è´¥
-#define     INSERT_PET_ERROR   -2       //æ·»åŠ é”™è¯¯
+#define     INSERT_PET_SUCCE    1       //Ìí¼Ó³É¹¦
+#define     INSERT_PET_FAIL    -1       //Ìí¼ÓÊ§°Ü
+#define     INSERT_PET_ERROR   -2       //Ìí¼Ó´íÎó
 
-#define     DELETE_PET_SUCCE    1       //åˆ é™¤æˆåŠŸ    
-#define     DELETE_PET_FAIL    -1       //åˆ é™¤å¤±è´¥
-#define     DELETE_PET_ERROR   -2       //åˆ é™¤é”™è¯¯
+#define     DELETE_PET_SUCCE    1       //É¾³ı³É¹¦    
+#define     DELETE_PET_FAIL    -1       //É¾³ıÊ§°Ü
+#define     DELETE_PET_ERROR   -2       //É¾³ı´íÎó
 
-#define     RWRITE_PET_SUCCE    1       //ä¿®æ”¹æˆåŠŸ
-#define     RWRITE_PET_FAIL    -1       //ä¿®æ”¹å¤±è´¥
-#define     RWRITE_PET_ERROR   -2       //ä¿®æ”¹é”™è¯¯
+#define     RWRITE_PET_SUCCE    1       //ĞŞ¸Ä³É¹¦
+#define     RWRITE_PET_FAIL    -1       //ĞŞ¸ÄÊ§°Ü
+#define     RWRITE_PET_ERROR   -2       //ĞŞ¸Ä´íÎó
 
 // std::vector<Pet>Pet_data;
 
@@ -30,12 +30,13 @@ public:
     // Animal(Pet pt):M_pt(&pt){}
     ~Animal();
  
-    int  Insert_Pet(Pet& pt);                 //æ·»åŠ å® ç‰©
-    int  Delete_Pet(Pet& pt);                 //åˆ é™¤å® ç‰©
-    int  Rwrite_Pet(Pet& pt);                 //ä¿®æ”¹å® ç‰©ä¿¡æ¯
+    int  Insert_Pet(Pet& pt);                 //Ìí¼Ó³èÎï
+    int  Delete_Pet(Pet& pt);                 //É¾³ı³èÎï
+    int  Rwrite_Pet(Pet& pt);                 //ĞŞ¸Ä³èÎïĞÅÏ¢
     int  Find_Pet(Pet &pt);                   
-    Pet& FindMs_Pet(std::string number);      //æŸ¥æ‰¾å® ç‰©ä¿¡æ¯
-    std::vector<Pet>&  All_me_Pet();          //è·å–æ‰€æœ‰å® ç‰©ä¿¡æ¯
+    Pet& FindMs_Pet(std::string number);      //²éÕÒ³èÎïĞÅÏ¢
+    std::vector<Pet>&  All_me_Pet();          //»ñÈ¡ËùÓĞ³èÎïĞÅÏ¢
 };
+
 
 #endif

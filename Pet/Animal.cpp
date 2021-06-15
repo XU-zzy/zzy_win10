@@ -12,19 +12,19 @@ Animal::~Animal()
     // delete M_pt;
 }
 
-//æŸ¥æ‰¾æ‰€æœ‰å® ç‰©
+//²éÕÒËùÓĞ³èÎï
 std::vector<Pet>&  Animal::All_me_Pet(){
     return Pet_data;
 }
 
-//æŸ¥æ‰¾å® ç‰©æ˜¯å¦å­˜åœ¨
+//²éÕÒ³èÎïÊÇ·ñ´æÔÚ
 int Animal::Find_Pet(Pet &pt){
-    //ä¸ºç©º
+    //Îª¿Õ
     if(Pet_data.empty()){
         return FIND_PET_EMPTY;
     }
 
-    //æŸ¥æ‰¾å­˜åœ¨
+    //²éÕÒ´æÔÚ
     // std::vector<Animal>::iterator it;
     for(auto it = Pet_data.begin();it != Pet_data.end();++it){
         if((*it) == pt){
@@ -32,27 +32,27 @@ int Animal::Find_Pet(Pet &pt){
         }
     }
 
-    //ä¸å­˜åœ¨
+    //²»´æÔÚ
     return FIND_PET_FAIL;
 }
 
-//æ·»åŠ å® ç‰©å‡½æ•°
+//Ìí¼Ó³èÎïº¯Êı
 int Animal::Insert_Pet(Pet& pt){
     int flag = Find_Pet(pt);
     Pet t = pt;
-    if(flag == FIND_PET_EMPTY || flag == FIND_PET_FAIL){  //ä¸ºç©ºæˆ–æ²¡æ‰¾åˆ°ï¼Œæ·»åŠ 
+    if(flag == FIND_PET_EMPTY || flag == FIND_PET_FAIL){  //Îª¿Õ»òÃ»ÕÒµ½£¬Ìí¼Ó
         Pet_data.push_back(t);
         return INSERT_PET_SUCCE;
-    }else if(flag == FIND_PET_SUCCE){      //æ‰¾åˆ°äº†ï¼Œé‡å¤
+    }else if(flag == FIND_PET_SUCCE){      //ÕÒµ½ÁË£¬ÖØ¸´
         return INSERT_PET_FAIL;
     }
     return INSERT_PET_ERROR;
 }
 
-//åˆ é™¤å® ç‰©å‡½æ•°
+//É¾³ı³èÎïº¯Êı
 int Animal::Delete_Pet(Pet& pt){
     int flag = Find_Pet(pt);
-    if(flag == FIND_PET_SUCCE){     //æ‰¾åˆ°äº†
+    if(flag == FIND_PET_SUCCE){     //ÕÒµ½ÁË
         for(auto it = Pet_data.begin();it != Pet_data.end();++it){
             if((*it) == pt){
                 Pet_data.erase(it);
@@ -60,17 +60,17 @@ int Animal::Delete_Pet(Pet& pt){
             }
         }
         // return DELETE_PET_SUCCE;
-    }else if(flag == FIND_PET_EMPTY){   //ç©º
+    }else if(flag == FIND_PET_EMPTY){   //¿Õ
         std::cout << "vector empty!" << std::endl;
         return DELETE_PET_FAIL;
-    }else if(flag == FIND_PET_FAIL){    //æ²¡æ‰¾åˆ°
+    }else if(flag == FIND_PET_FAIL){    //Ã»ÕÒµ½
         std::cout << "This pet is not in vector!" << std::endl;
         return DELETE_PET_FAIL;
     }
     return DELETE_PET_ERROR;
 }
 
-//ä¿®æ”¹å® ç‰©ä¿¡æ¯
+//ĞŞ¸Ä³èÎïĞÅÏ¢
 int Animal::Rwrite_Pet(Pet& pt){
     if(Find_Pet(pt) != FIND_PET_SUCCE){
         std::cout << "This pet is not in vector!" << std::endl;
@@ -85,7 +85,7 @@ int Animal::Rwrite_Pet(Pet& pt){
     return RWRITE_PET_ERROR;
 }
 
-//æŸ¥æ‰¾å® ç‰©ä¿¡æ¯
+//²éÕÒ³èÎïĞÅÏ¢
 Pet& Animal::FindMs_Pet(std::string number){
     for(auto it = Pet_data.begin();it != Pet_data.end();++it){
         if((*it).P_number == number){

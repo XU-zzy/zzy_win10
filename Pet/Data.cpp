@@ -36,7 +36,7 @@ void Date::Show()
     std::cout<<_year<<"-"<<_month<<"-"<<_day<< std::endl;
 }
  
-//  è¿ç®—ç¬¦é‡è½½ç»å†ä»¥ä¸‹å‡ ä¸ªæ­¥éª¤
+//  ÔËËã·ûÖØÔØ¾­ÀúÒÔÏÂ¼¸¸ö²½Öè
 //  (d1==d2)
 //  d1.operator==(d2)
 //  d1.operator==(&d1,d2)
@@ -48,9 +48,9 @@ bool Date::operator==(const Date& d)
     return false;
 }
  
-//ä¼ å€¼è¿”å›ï¼šä¼šå¤šè°ƒç”¨ä¸€æ¬¡æ‹·è´æ„é€ å‡½æ•°
-//ä¼ å¼•ç”¨è¿”å›ï¼šç›´æ¥è¿”å›ï¼Œä¸éœ€è¦è°ƒç”¨æ‹·è´æ„é€ 
-//            å‡ºäº†ä½œç”¨äºå˜é‡è¿˜åœ¨ï¼Œå°½é‡ä½¿ç”¨ä¼ å¼•ç”¨è¿”å›
+//´«Öµ·µ»Ø£º»á¶àµ÷ÓÃÒ»´Î¿½±´¹¹Ôìº¯Êı
+//´«ÒıÓÃ·µ»Ø£ºÖ±½Ó·µ»Ø£¬²»ĞèÒªµ÷ÓÃ¿½±´¹¹Ôì
+//            ³öÁË×÷ÓÃÓÚ±äÁ¿»¹ÔÚ£¬¾¡Á¿Ê¹ÓÃ´«ÒıÓÃ·µ»Ø
 Date& Date::operator=(const Date& d)
 {
     if(this != &d)
@@ -146,7 +146,7 @@ Date& Date::operator-=(int day)
     return *this;
 }
  
-int Date::operator-(const Date& d)//æ—¥æœŸ-æ—¥æœŸ è¿”å›å¤©æ•°
+int Date::operator-(const Date& d)//ÈÕÆÚ-ÈÕÆÚ ·µ»ØÌìÊı
 {
     int flag = 1;
     Date max = (*this);
@@ -167,15 +167,15 @@ int Date::operator-(const Date& d)//æ—¥æœŸ-æ—¥æœŸ è¿”å›å¤©æ•°
 }
  
 //  ++d1 ->  d1.operator++(&d1);
-Date& Date::operator++()//é»˜è®¤å‰ç½®
+Date& Date::operator++()//Ä¬ÈÏÇ°ÖÃ
 {
-    *this += 1; // åªè°ƒç”¨ä¸€ä¸ªå‡½æ•°
-    //*this = *this + 1; //è°ƒç”¨ä¸¤ä¸ªå‡½æ•°ï¼Œè¿˜è¦è°ƒç”¨æ‹·è´æ„é€ å‡½æ•°
+    *this += 1; // Ö»µ÷ÓÃÒ»¸öº¯Êı
+    //*this = *this + 1; //µ÷ÓÃÁ½¸öº¯Êı£¬»¹Òªµ÷ÓÃ¿½±´¹¹Ôìº¯Êı
     return *this;
 }
  
 //  d1++ ->  d1.operator++(&d1,0);
-Date Date::operator++(int)//ç”¨å‚æ•°æ ‡å¿—åç½®++
+Date Date::operator++(int)//ÓÃ²ÎÊı±êÖ¾ºóÖÃ++
 {
     Date tmp(*this);
     *this += 1;

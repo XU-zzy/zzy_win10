@@ -2,43 +2,42 @@
 #include"Animal.h"
 #include"Pet.h"
 
-//æ˜¾ç¤ºå® ç‰©ä¿¡æ¯
+//ÏÔÊ¾³èÎïĞÅÏ¢
 int Display::Display_Pet_Mes(Pet &pet){
-    std::cout<< "å® ç‰©ä¿¡æ¯å¦‚ä¸‹:"                 << std::endl;
-    std::cout << "ç¼–å·ï¼š " << pet.P_number      << std::endl;
-    std::cout << "åç§°ï¼š " << pet.P_name        << std::endl;
-    std::cout << "ä½“é‡ï¼š " << pet.P_weight      << std::endl;
-    std::cout << "å¹´é¾„ï¼š " << pet.P_age         << std::endl;
-    std::cout << "ç±»åˆ«ï¼š " << pet.P_kind        << std::endl;
-    std::cout << "ä»·æ ¼ï¼š " << pet.P_price       << std::endl;
-    std::cout << "æ€§æ ¼ï¼š " << pet.P_character   << std::endl;
-    std::cout << "æ˜¯å¦å·²è¢«å–å‡ºï¼š ";
+    std::cout<< "³èÎïĞÅÏ¢ÈçÏÂ:"                 << std::endl;
+    std::cout << "±àºÅ£º " << pet.P_number      << std::endl;
+    std::cout << "Ãû³Æ£º " << pet.P_name        << std::endl;
+    std::cout << "ÌåÖØ£º " << pet.P_weight      << std::endl;
+    std::cout << "ÄêÁä£º " << pet.P_age         << std::endl;
+    std::cout << "Àà±ğ£º " << pet.P_kind        << std::endl;
+    std::cout << "¼Û¸ñ£º " << pet.P_price       << std::endl;
+    std::cout << "ĞÔ¸ñ£º " << pet.P_character   << std::endl;
+    std::cout << "ÊÇ·ñÒÑ±»Âô³ö£º ";
     if(pet.P_state == "Y"){
-        std::cout << "æ˜¯" <<  std::endl;
+        std::cout << "ÊÇ" <<  std::endl;
     }else{
-        std::cout << "å¦" <<  std::endl;
+        std::cout << "·ñ" <<  std::endl;
     }
     return 0;
 }
 
-//æ˜¾ç¤ºä¸»èœå•
+//ÏÔÊ¾Ö÷²Ëµ¥
 int Display::Display_Main_Menu(){
     int choice;
     do{
-        std::cout<<std::endl<<"â˜…â˜…â˜…ã€æ¬¢è¿è¿›å…¥å® ç‰©å•†åº—ç®¡ç†ç³»ç»Ÿï¼ è¯·é€‰æ‹©èœå•:ã€‘â˜…â˜…â˜…"<<std::endl;
+        std::cout<<std::endl<<"¡ï¡ï¡ï¡¾»¶Ó­½øÈë³èÎïÉÌµê¹ÜÀíÏµÍ³£¡ ÇëÑ¡Ôñ²Ëµ¥:¡¿¡ï¡ï¡ï"<<std::endl;
 	    std::cout<<" \t|=========================== |"<<std::endl; 
-	    std::cout<<" \t| 1.æ·»åŠ å® ç‰©çš„ä¿¡æ¯            |"<<std::endl; 
-	    std::cout<<" \t| 2.åˆ é™¤å® ç‰©çš„ä¿¡æ¯            |"<<std::endl;
-	    std::cout<<" \t| 3.ä¿®æ”¹å® ç‰©çš„ä¿¡æ¯            |"<<std::endl;
-	    std::cout<<" \t| 4.æŸ¥è¯¢å® ç‰©çš„ä¿¡æ¯            |"<<std::endl;
-	    std::cout<<" \t| 5.æŸ¥è¯¢æ‰€æœ‰å® ç‰©çš„ä¿¡æ¯         |"<<std::endl;
-	    std::cout<<" \t| 6.ä¿å­˜æ–‡ä»¶                  |"<<std::endl;
-	    std::cout<<" \t| 7.è¯»å–æ–‡ä»¶                  |"<<std::endl;
-	    std::cout<<" \t| 8.é€€å‡ºç³»ç»Ÿ                  |"<<std::endl;
+	    std::cout<<" \t| 1.Ìí¼Ó³èÎïµÄĞÅÏ¢            |"<<std::endl; 
+	    std::cout<<" \t| 2.É¾³ı³èÎïµÄĞÅÏ¢            |"<<std::endl;
+	    std::cout<<" \t| 3.ĞŞ¸Ä³èÎïµÄĞÅÏ¢            |"<<std::endl;
+	    std::cout<<" \t| 4.²éÑ¯³èÎïµÄĞÅÏ¢            |"<<std::endl;
+	    std::cout<<" \t| 5.²éÑ¯ËùÓĞ³èÎïµÄĞÅÏ¢         |"<<std::endl;
+	    std::cout<<" \t| 6.±£´æÎÄ¼ş                  |"<<std::endl;
+	    std::cout<<" \t| 7.¶ÁÈ¡ÎÄ¼ş                  |"<<std::endl;
+	    std::cout<<" \t| 8.ÍË³öÏµÍ³                  |"<<std::endl;
 	    std::cout<<" \t|=========================== |\n"<<std::endl;
 	
         std::cin>>choice;
-
         switch(choice){
             case 1: {Display_Insert();      continue;}
             case 2: {Display_Delete();      continue;}
@@ -55,95 +54,95 @@ int Display::Display_Main_Menu(){
     return 0;
 }
 
-// æ·»åŠ å® ç‰©ä¿¡æ¯
+// Ìí¼Ó³èÎïĞÅÏ¢
 int Display::Display_Insert(){
     
         Pet pt;
         std::string choice;
 
-        std::cout << "è¯·å…ˆè¾“å…¥å® ç‰©ä¿¡æ¯ï¼š" << std::endl;
-        std::cout << "ç¼–å·" << std::endl;
+        std::cout << "ÇëÏÈÊäÈë³èÎïĞÅÏ¢£º" << std::endl;
+        std::cout << "±àºÅ" << std::endl;
         std::cin >> pt.P_number;
-        std::cout << "åç§°" << std::endl;
+        std::cout << "Ãû³Æ" << std::endl;
         std::cin >> pt.P_name;
-        std::cout << "ä½“é‡" << std::endl;
+        std::cout << "ÌåÖØ" << std::endl;
         std::cin >> pt.P_weight;
-        std::cout << "å¹´é¾„" << std::endl;
+        std::cout << "ÄêÁä" << std::endl;
         std::cin >> pt.P_age;
-        std::cout << "ç±»åˆ«" << std::endl;
+        std::cout << "Àà±ğ" << std::endl;
         std::cin >> pt.P_kind;
-        std::cout << "ä»·æ ¼" << std::endl;
+        std::cout << "¼Û¸ñ" << std::endl;
         std::cin >> pt.P_price;
-        std::cout << "æ€§æ ¼" << std::endl;
+        std::cout << "ĞÔ¸ñ" << std::endl;
         std::cin >> pt.P_character;
-        //ç½®ä¸ºæœªå–å‡º
+        //ÖÃÎªÎ´Âô³ö
         pt.P_state = 'N';
 
         int flag = Display_Pet_Mes(pt);
     while(1){
-        std::cout << "æ˜¯å¦ç¡®è®¤æ·»åŠ (Y/N)" << std::endl;
+        std::cout << "ÊÇ·ñÈ·ÈÏÌí¼Ó(Y/N)" << std::endl;
         std::cin >> choice;
 
         if(choice == "Y" || choice == "y"){
             int flag = pet.Insert_Pet(pt);
             if(flag == INSERT_PET_SUCCE){
-                std::cout << " æ·»åŠ æˆåŠŸ" << std::endl;
+                std::cout << " Ìí¼Ó³É¹¦" << std::endl;
                 return 1;
             }else if(flag == INSERT_PET_FAIL){
-                std::cout << "ç¼–å·é‡å¤ï¼Œæ·»åŠ å¤±è´¥" << std::endl;
+                std::cout << "±àºÅÖØ¸´£¬Ìí¼ÓÊ§°Ü" << std::endl;
                 return -1;
             }else{
-                std::cout << "æ·»åŠ å¤±è´¥" << std::endl;
+                std::cout << "Ìí¼ÓÊ§°Ü" << std::endl;
             }
         }else if(choice == "N" || choice == "n"){
-            std::cout << "å–æ¶ˆæ·»åŠ " << std::endl;
+            std::cout << "È¡ÏûÌí¼Ó" << std::endl;
             return 0;
         }else{
-            std::cout << "è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥" << std::endl;
+            std::cout << "ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë" << std::endl;
         }
     }
     return 0;
 } 
 
-//åˆ é™¤å® ç‰©ä¿¡æ¯
+//É¾³ı³èÎïĞÅÏ¢
 int Display::Display_Delete(){
     Pet pt;
     std::string choice;
 
-        std::cout << "è¯·è¾“å…¥è¦åˆ é™¤çš„å® ç‰©ç¼–å·ï¼š" << std::endl;
-        std::cout << "ç¼–å·" << std::endl;
+        std::cout << "ÇëÊäÈëÒªÉ¾³ıµÄ³èÎï±àºÅ£º" << std::endl;
+        std::cout << "±àºÅ" << std::endl;
         std::cin >> pt.P_number;
 
         pt = Animal::FindMs_Pet(pt.P_number);
 
         Display_Pet_Mes(pt);
         while(1){
-            std::cout << "æ˜¯å¦åˆ é™¤è¿™ä¸ªå® ç‰©ä¿¡æ¯(Y/N)" << std::endl;
+            std::cout << "ÊÇ·ñÉ¾³ıÕâ¸ö³èÎïĞÅÏ¢(Y/N)" << std::endl;
             std::cin >> choice;
 
             if(choice == "Y" || choice == "y"){
                 if(pet.Delete_Pet(pt) == DELETE_PET_SUCCE){
-                    std::cout << " åˆ é™¤æˆåŠŸ" << std::endl;
+                    std::cout << " É¾³ı³É¹¦" << std::endl;
                     return 1;
                 }else{
-                    std::cout << "æ·»åŠ å¤±è´¥" << std::endl;
+                    std::cout << "Ìí¼ÓÊ§°Ü" << std::endl;
                     return -1;
                 }
             }else if(choice == "N" || choice == "n"){
-                std::cout << "å–æ¶ˆåˆ é™¤" << std::endl;
+                std::cout << "È¡ÏûÉ¾³ı" << std::endl;
                 return 0;
             }else{
-                std::cout << "è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥" << std::endl;
+                std::cout << "ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë" << std::endl;
             }
         }
     return 0;
 }
 
-//æ‰“å°æ‰€æœ‰å® ç‰©ä¿¡æ¯
+//´òÓ¡ËùÓĞ³èÎïĞÅÏ¢
 int Display::Display_All_Mes(){
     std::vector<Pet> P_Mes = Animal::All_me_Pet();
     if(P_Mes.empty()){
-        std::cout << "å® ç‰©ä¿¡æ¯ä¸ºç©ºï¼" << std::endl;
+        std::cout << "³èÎïĞÅÏ¢Îª¿Õ£¡" << std::endl;
     }else{
         for(auto it = P_Mes.begin();it != P_Mes.end();++it){
             Display_Pet_Mes(*it);
@@ -153,83 +152,83 @@ int Display::Display_All_Mes(){
     return 0;
 }
 
-//æŸ¥æ‰¾å® ç‰©
+//²éÕÒ³èÎï
 int Display::Display_Search(){
-    std::cout << "è¯·è¾“å…¥è¦æŸ¥æ‰¾çš„å® ç‰©ç¼–å·ï¼š" << std::endl;
+    std::cout << "ÇëÊäÈëÒª²éÕÒµÄ³èÎï±àºÅ£º" << std::endl;
     std::string choice;
     std::cin >> choice;
 
     Pet t = Animal::FindMs_Pet(choice);
     if(t.P_number == "-1"){
-        std::cout << "ç¼–å·ä¸ºï¼š" << choice << " çš„å® ç‰©ä¸å­˜åœ¨"<< std::endl;
+        std::cout << "±àºÅÎª£º" << choice << " µÄ³èÎï²»´æÔÚ"<< std::endl;
     }else{
         Display_Pet_Mes(t);
     }
     return 0;
 }
 
-//ä¿®æ”¹å® ç‰©ä¿¡æ¯
+//ĞŞ¸Ä³èÎïĞÅÏ¢
 int Display::Display_Rwrite(){
-    std::cout << "è¯·è¾“å…¥è¦ä¿®æ”¹çš„å® ç‰©ç¼–å·ï¼š" << std::endl;
+    std::cout << "ÇëÊäÈëÒªĞŞ¸ÄµÄ³èÎï±àºÅ£º" << std::endl;
     std::string choice;
     std::cin >> choice;
 
     Pet t = Animal::FindMs_Pet(choice);
     if(t.P_number == "-1"){
-        std::cout << "ç¼–å·ä¸ºï¼š" << choice << " çš„å® ç‰©ä¸å­˜åœ¨"<< std::endl;
+        std::cout << "±àºÅÎª£º" << choice << " µÄ³èÎï²»´æÔÚ"<< std::endl;
         return 0;
     }else{
         Pet pt;
         std::string choice;
         pt.P_number = t.P_number;
 
-        std::cout << "è¯·è¾“å…¥æ–°çš„å® ç‰©ä¿¡æ¯ï¼š" << std::endl;
-        std::cout << "åç§°" << std::endl;
+        std::cout << "ÇëÊäÈëĞÂµÄ³èÎïĞÅÏ¢£º" << std::endl;
+        std::cout << "Ãû³Æ" << std::endl;
         std::cin >> pt.P_name;
-        std::cout << "ä½“é‡" << std::endl;
+        std::cout << "ÌåÖØ" << std::endl;
         std::cin >> pt.P_weight;
-        std::cout << "å¹´é¾„" << std::endl;
+        std::cout << "ÄêÁä" << std::endl;
         std::cin >> pt.P_age;
-        std::cout << "ç±»åˆ«" << std::endl;
+        std::cout << "Àà±ğ" << std::endl;
         std::cin >> pt.P_kind;
-        std::cout << "ä»·æ ¼" << std::endl;
+        std::cout << "¼Û¸ñ" << std::endl;
         std::cin >> pt.P_price;
-        std::cout << "æ€§æ ¼" << std::endl;
+        std::cout << "ĞÔ¸ñ" << std::endl;
         std::cin >> pt.P_character;
         std::string Y_N;
         while(1){
-            std::cout << "æ˜¯å¦å·²ç»å–å‡º(Y/N)" << std::endl;
+            std::cout << "ÊÇ·ñÒÑ¾­Âô³ö(Y/N)" << std::endl;
             std::cin >> Y_N;
             if(Y_N == "Y" || Y_N == "N"){
                 pt.P_state = Y_N;
                 break;
             }else{
-                std::cout << "è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥" << std::endl;
+                std::cout << "ÊäÈëÓĞÎó£¬ÇëÖØĞÂÊäÈë" << std::endl;
                 continue;
             }
         }
-        std::cout << "ä¿®æ”¹åçš„";
+        std::cout << "ĞŞ¸ÄºóµÄ";
         Display_Pet_Mes(pt);
         int flag = Rwrite_Pet(pt);
         if(flag == RWRITE_PET_SUCCE){
-            std::cout << "ä¿®æ”¹æˆåŠŸ" << std::endl;
+            std::cout << "ĞŞ¸Ä³É¹¦" << std::endl;
         }else if(flag == RWRITE_PET_ERROR){
-            std::cout << "ä¿®æ”¹å¤±è´¥" << std::endl;
+            std::cout << "ĞŞ¸ÄÊ§°Ü" << std::endl;
         }
     }
     return 0;
 }
 
-//ä¿å­˜æ–‡ä»¶
+//±£´æÎÄ¼ş
 int Display::Display_Save_File(){
     char file[FILE_MAX];
     std::string FileName;
 
     do{
-        std::cout << "è¯·è¾“å…¥è¦ä¿å­˜ä¿¡æ¯çš„æ–‡ä»¶å";
+        std::cout << "ÇëÊäÈëÒª±£´æĞÅÏ¢µÄÎÄ¼şÃû";
         std::cin>>FileName;
         if(FileName.size() > FILE_MAX){
-            std::cout << "æ–‡ä»¶åè¿‡é•¿,è¯·é‡æ–°è¾“å…¥" << std::endl;
+            std::cout << "ÎÄ¼şÃû¹ı³¤,ÇëÖØĞÂÊäÈë" << std::endl;
             continue;
         }
 
@@ -237,47 +236,47 @@ int Display::Display_Save_File(){
         std::ofstream F_Out(file);
 
         if(!F_Out){
-            std::cout << "æ–‡ä»¶å†™å…¥å¤±è´¥,æ£€æŸ¥æ–‡ä»¶å" << std::endl;
+            std::cout << "ÎÄ¼şĞ´ÈëÊ§°Ü,¼ì²éÎÄ¼şÃû" << std::endl;
             continue;
         }else{
             std::vector<Pet>P_data = All_me_Pet();
             for(auto it = P_data.begin();it != P_data.end();++it){
-                F_Out << std::endl << "ç¼–å·ï¼š"<<  (*it).P_number      << std::endl
-                                   << "åç§°ï¼š"<<  (*it).P_name        << std::endl
-                                   << "ä½“é‡ï¼š"<<  (*it).P_weight      << std::endl
-                                   << "å¹´é¾„ï¼š"<<  (*it).P_age         << std::endl
-                                   << "ç±»åˆ«ï¼š"<<  (*it).P_kind        << std::endl
-                                   << "ä»·æ ¼ï¼š"<<  (*it).P_price        << std::endl
-                                   << "æ€§æ ¼ï¼š"<<  (*it).P_character    << std::endl
-                                   << "æ˜¯å¦å·²è¢«å–å‡ºï¼š"<< (*it).P_state;
+                F_Out << std::endl << "±àºÅ£º"<<  (*it).P_number      << std::endl
+                                   << "Ãû³Æ£º"<<  (*it).P_name        << std::endl
+                                   << "ÌåÖØ£º"<<  (*it).P_weight      << std::endl
+                                   << "ÄêÁä£º"<<  (*it).P_age         << std::endl
+                                   << "Àà±ğ£º"<<  (*it).P_kind        << std::endl
+                                   << "¼Û¸ñ£º"<<  (*it).P_price        << std::endl
+                                   << "ĞÔ¸ñ£º"<<  (*it).P_character    << std::endl
+                                   << "ÊÇ·ñÒÑ±»Âô³ö£º"<< (*it).P_state;
             }
             
         }
         F_Out.close();
-        std::cout << "å® ç‰©ä¿¡æ¯å†™å…¥æ–‡ä»¶æˆåŠŸ" << std::endl;
+        std::cout << "³èÎïĞÅÏ¢Ğ´ÈëÎÄ¼ş³É¹¦" << std::endl;
         break;
     }while(1);
 
     return 0;
 }
 
-//è¯»å…¥æ–‡ä»¶
+//¶ÁÈëÎÄ¼ş
 int Display::Display_Read_File(){
     char file[FILE_MAX];
     std::string FileName;
 
     do{
-        std::cout << "è¯·è¾“å…¥è¦è¯»å–ä¿¡æ¯çš„æ–‡ä»¶å";
+        std::cout << "ÇëÊäÈëÒª¶ÁÈ¡ĞÅÏ¢µÄÎÄ¼şÃû";
         std::cin>>FileName;
         if(FileName.size() > FILE_MAX){
-            std::cout << "æ–‡ä»¶åè¿‡é•¿,è¯·é‡æ–°è¾“å…¥" << std::endl;
+            std::cout << "ÎÄ¼şÃû¹ı³¤,ÇëÖØĞÂÊäÈë" << std::endl;
             continue;
         }
 
         strcpy(file,FileName.c_str());
         std::ifstream F_in(file);
         if(!F_in){
-            std::cout << "æ–‡ä»¶åé”™è¯¯,è¯·é‡æ–°è¾“å…¥" << std::endl;
+            std::cout << "ÎÄ¼şÃû´íÎó,ÇëÖØĞÂÊäÈë" << std::endl;
             continue;
         }else{
             while(!F_in.eof()){
@@ -285,28 +284,28 @@ int Display::Display_Read_File(){
                 std::string str;
                 Pet pet;
                 F_in>>str;
-                index = str.find("ï¼š");
+                index = str.find("£º");
                 pet.P_number = str.substr(index + 2);
                 F_in>>str;
-                index = str.find("ï¼š");
+                index = str.find("£º");
                 pet.P_name = str.substr(index + 2);
                 F_in>>str;
-                index = str.find("ï¼š");
+                index = str.find("£º");
                 pet.P_weight = str.substr(index + 2);
                 F_in>>str;
-                index = str.find("ï¼š");
+                index = str.find("£º");
                 pet.P_age = str.substr(index + 2);
                 F_in>>str;
-                index = str.find("ï¼š");
+                index = str.find("£º");
                 pet.P_kind = str.substr(index + 2);
                 F_in>>str;
-                index = str.find("ï¼š");
+                index = str.find("£º");
                 pet.P_price = str.substr(index + 2);
                 F_in>>str;
-                index = str.find("ï¼š");
+                index = str.find("£º");
                 pet.P_character = str.substr(index + 2);
                 F_in>>str;
-                index = str.find("ï¼š");
+                index = str.find("£º");
                 pet.P_state = str.substr(index + 2);
 
                 // Display_Pet_Mes(pet);
@@ -314,12 +313,12 @@ int Display::Display_Read_File(){
                 Insert_Pet(pet);
 
             }
-            std::cout << "è¯»å…¥å® ç‰©æ–‡ä»¶ä¿¡æ¯æˆåŠŸ" << std::endl;
+            std::cout << "¶ÁÈë³èÎïÎÄ¼şĞÅÏ¢³É¹¦" << std::endl;
             break;
         }   
     }while (1);
 
-    std::cout << "è¯»å…¥çš„å® ç‰©ä¿¡æ¯å¦‚ä¸‹ï¼š" << std::endl;
+    std::cout << "¶ÁÈëµÄ³èÎïĞÅÏ¢ÈçÏÂ£º" << std::endl;
     Display_All_Mes();
     return 0;
 }
