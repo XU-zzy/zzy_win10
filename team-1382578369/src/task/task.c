@@ -222,7 +222,7 @@ struct task_struct* task_start(char* name, int prio, task_func function, void* f
     //加入就绪任务队列
     list_append(&task_ready_list, &task->general_tag);
 
-    //之前不再全部任务队列中
+    //之前不在全部任务队列中
     assert(!elem_find(&task_all_list, &task->all_list_tag));
     //加入到全部任务队列
     list_append(&task_all_list, &task->all_list_tag);

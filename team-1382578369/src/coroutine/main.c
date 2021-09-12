@@ -56,7 +56,7 @@ int main() {
     }
 //    pc[0] = (unsigned long)thread1;
 //    pc[1] = (unsigned long)thread2;
-
+ 
     while(1) {
         printf("wait for the signal\n");
         sigqueue(pid,sig,mysig);//向本进程发送信号，并传递附加信息
